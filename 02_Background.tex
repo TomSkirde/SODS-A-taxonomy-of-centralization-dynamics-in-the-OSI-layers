@@ -1,0 +1,46 @@
+\section{Background}
+\label{sec:Background}
+
+As highlighted in the \nameref{sec:Introduction} Section / Section~\ref{sec:Introduction}, ...
+
+\subsection{Useful commands when writing the paper with \LaTeX}
+
+For a template, visit \url{https://www.overleaf.com/read/xwhrcxycrsmh} or see the zip file.
+
+If you write the paper with MS~Word, consider using reference management software that provides a Word plugin, e.g., Citavi. For \LaTeX, one can use Biblatex directly or use tools like Zotero.
+
+\Acp{ZKP} are important. A \ac{ZKP} is defined via ... We use \acp{ZKP} in ...
+
+
+\subsection{Including figures}
+
+\begin{figure}[!tb] % <-- Specify priority to include top, bottom, or here
+    \centering
+    \includegraphics[width=2cm, trim=0cm 2cm 0cm 0cm, clip]{Graphics/Icon_ERCIS.pdf}
+    \caption{My figure caption}
+    \label{fig:my_label}
+\end{figure}
+
+Figures can be cropped conveniently. One can link to them conveniently; see Figure~\ref{fig:my_figure_label}. If you make heavy use of referring to figures and sections, the ``cleveref'' package may come in handy. Vector images (PDFs are easiest to handle) are preferred. One good approach is making the Figures in Powerpoint, exporting them as PDF file (multiple pages), uploading them as Figures.pdf and then use \verb+\includegraphics[page=1, width=..., trim=..., clip]{Figures.pdf}+. This avoids the need to upload many individual figures. For instance, I uploaded an example presentation and included the second and third page in the following two figures.
+
+\begin{figure}
+    \centering
+    \includegraphics[page=2, width=0.8\linewidth]{Figures/Example presentation.pdf}
+    \caption{Second page of the presentation.}
+    \vspace{2em}
+    \includegraphics[page=3, width=0.8\linewidth]{Figures/Example presentation.pdf}
+    \caption{Third page of the presentation.}
+    \label{fig:my_figure_label}
+\end{figure}
+
+\subsection{Including tables}
+Use [H] to place the table at exactly this place. Use [h] to place it at this place if suitable.  Most of the time, [!tb] will be better, then it is placed at the top or bottom of a page nearby. Refer to table via Table~\ref{tab:my_table_label}.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c}
+        A & B \\\hline
+        C & D
+    \end{tabular}
+    \caption{My table caption.}
+    \label{tab:my_table_label}
+\end{table}

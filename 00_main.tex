@@ -1,0 +1,189 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{varwidth}
+\usepackage{lipsum}
+\usepackage{xurl}
+\usepackage{graphicx}
+\usepackage{nameref}
+\usepackage{acronym}
+\usepackage{mathptmx}
+\usepackage[margin=2.5cm, tmargin=3cm, headheight=1cm]{geometry}
+
+\usepackage[style=apa, natbib=true]{biblatex}
+\addbibresource{literature.bib}
+
+%\usepackage[hidelinks]{hyperref} % without colored boxes around links
+\usepackage{hyperref} % with colored boxes around links -- useful for proofreading but less recommended for submission
+\usepackage{float}
+
+\setlength{\parskip}{0.5\baselineskip}%
+\setlength{\parindent}{0pt}%
+
+
+\widowpenalty=10000
+\clubpenalty=10000
+\sloppy
+
+\renewcommand{\baselinestretch}{1.5}
+
+\title{\huge\textbf{Essay Title} \\\Large \textbf{Optional Essay Subtitle}}
+\author{\Large
+Author 1, Author 1 Student ID, \href{mailto:author1@uni-muenster.de}{author1@uni-muenster.de} \\
+\Large (Author 2) }
+
+\date{}
+
+\begin{document}
+
+\renewenvironment{abstract}
+{
+	\clearpage
+	\pagenumbering{gobble}
+	\thispagestyle{empty}
+	\small
+	\begin{center}
+		\bfseries\normalsize \abstractname\vspace{-1em}\vspace{-1em}
+	\end{center}
+	\rule{\textwidth}{1pt}
+	\vspace{-1.5em}
+	\list{}{%
+		\setlength{\leftmargin}{8mm}
+		\setlength{\rightmargin}{\leftmargin}%
+	}%
+	\item\relax}
+{\endlist \vspace{-1em}	\rule{\textwidth}{1pt}} 
+
+\raggedbottom
+
+\begin{figure*}
+\begin{center}
+\includegraphics[width=0.50\linewidth, trim=0cm -0.5cm -3cm 0cm, clip]{Graphics/Icon_Uni_Muenster.pdf}
+\includegraphics[width=0.30\linewidth, trim=0cm 3cm 0cm 0cm, clip]{Graphics/Icon_ERCIS.pdf}
+\end{center}
+\end{figure*}
+\vspace{2cm}
+\begin{center}
+    \Large \textbf{Essay} \\[0.5cm]
+    Security of Distributed Systems \\[0.5cm]
+    Summer Semester 2025
+\end{center}
+\vspace{1cm}
+{\let\newpage\relax\maketitle}
+\vspace{1cm}
+\begin{center}
+    \large Lecturer: Dr. Johannes Sedlmeir
+\end{center}
+\vspace{0.2cm}
+\begin{center}
+    \large Submission date: \today
+\end{center}
+
+\thispagestyle{empty}
+
+\clearpage~
+\thispagestyle{empty}
+
+\clearpage%
+\begingroup%
+\thispagestyle{empty}%
+\null\vfill%
+\centering%
+\begin{varwidth}{\textwidth}
+    {\raggedright\large\itshape%
+    Any sufficiently advanced technology is indistinguishable from magic.\par\bigskip%
+    }%
+    {
+    \raggedleft\large\scshape{Arthur C. Clarke}\par%
+    }
+\end{varwidth}%
+\vfill\vfill%
+\endgroup%
+\clearpage
+\thispagestyle{empty}
+~
+\vspace{4cm}
+\begin{abstract}
+    A short summary of the essay (max. 200 words). \lipsum[1] \\[0.5cm]
+    \textbf{\emph{Keywords:}} Keyword 1, ...
+    
+\end{abstract}
+\vspace{2cm}
+\begin{figure}[H]
+\includegraphics[width=2cm]{Assets/cc-by.png}
+\end{figure}
+\vspace{-0.75cm}
+This work is licensed under the license \href{https://creativecommons.org/licenses/by/4.0/legalcode}{Attribution 4.0 International}.
+\thispagestyle{empty}
+\clearpage
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+\section*{Optional: Acronmys}
+\begin{acronym}[GDPR] % <-- put longest acronym here for good indentation
+\acro{ZKP}{zero-knowledge proof}
+\end{acronym}
+Note: With \verb+\acrodefplural+ you can define custom plural. Refer to acronyms with \verb+\ac{}+ and \verb+\acp{}+. Sometimes you may need the capitalized versions: \verb+\Ac{}+. \verb+\Acp{}+ is sometimes buggy - if you need this and would like to include an index, consider using the ``glossaries'' package (I can help you out there).
+\section*{Optional: List of Figures and List of Tables}
+\listoffigures
+\listoftables
+\thispagestyle{empty}
+\setcounter{page}{0}
+\clearpage
+
+\pagenumbering{arabic}
+\input{01_Introduction}
+\clearpage
+\input{02_Background}
+\clearpage
+\input{03_Best Practices}
+
+\clearpage
+\printbibliography
+
+\clearpage
+\thispagestyle{empty}
+\section*{Declaration of authorship}
+I/We hereby declare that, to the best of my knowledge and belief, this essay titled ``XXX'' is my/our own work. I/We confirm that each significant contribution to and quotation in this thesis that originates from the work or works of
+others is indicated by the proper use of citations and references.
+
+Münster, \today \\[2cm]
+Firstname Lastname Author 1 \qquad\qquad\qquad
+(Firstname Lastname Author 2)
+
+\clearpage
+\thispagestyle{empty}
+\section*{CRediT author statement (only for more than one author)}
+
+You can use this \href{https://www.elsevier.com/researcher/author/policies-and-guidelines/credit-author-statement}{Link to Elsevier's Contributor Roles Taxonomy} as guideline. Please fill it out for every Section and for longer subsections. Of course, you can also choose other forms, such as a paragraph for each author that details the individual contributions.
+
+\clearpage
+\thispagestyle{empty}
+\small
+\section*{Consent form}
+~\\[-3cm]
+\subsection*{for the use of plagiarism detection software to check my/our essay}
+
+\textbf{What is plagiarism?} \\
+Plagiarism is defined as submitting someone else’s work or ideas as your
+own without a complete indication of the source. It is hereby irrelevant whether the work of
+others is copied word by word without acknowledgment of the source, text structures (e.g., line of
+argumentation or outline) are borrowed or texts are translated from a foreign language.
+
+\textbf{Use of plagiarism detection software} \\
+The supervisor may use plagiarism software to check each submitted essay for plagiarism. For that purpose, the thesis would be electronically forwarded to a software service provider, where the software checks for potential matches between the submitted work and work from other sources. For future comparisons with other essays,
+your essay will be permanently stored in a database. Only the School of Business and Economics
+of the University of Münster is allowed to access your stored essay. The student(s) agree(s) that his or
+her (their) essay may be stored and reproduced only for the purpose of plagiarism assessment. The supervisor of the essay will be advised on the outcome of the plagiarism assessment.
+
+\textbf{Sanctions} \\
+Each case of plagiarism constitutes an attempt to deceive in terms of the examination regulations and will lead to the module being graded as ``failed''. This will be communicated to the examination office, where your case will be documented. In the event of a serious case of deception, the examinee can be generally excluded from any further examination. This can lead
+to the expulsion of the student. Even after graduation from university, plagiarism can result in the withdrawal of the awarded academic degree.
+
+I confirm that I have read and understood the information in this document. I agree with the procedure described for plagiarism assessment and potential sanctioning. \\[-0cm]
+
+Münster, \today \\[1.5cm]
+Firstname Lastname Author 1\qquad\qquad\qquad (Firstname Lastname Author 2)
+
+\end{document}
