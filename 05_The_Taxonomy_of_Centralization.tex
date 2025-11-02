@@ -1,0 +1,31 @@
+\section{The Taxonomy of Centralization}
+\label{sec:Best_practices}
+
+Consistency in reference formatting is key. The following guidelines are \textbf{*not*} mandatory. But they will give you a feeling that uniformity in the references style has many facets that you should consider.
+
+\textbf{The only things I mandate are:}  
+\begin{itemize}
+    \item To use an \emph{authoryear} citation style (as opposed to numeric), as it helps readers to quickly recognize papers previously encountered.
+    \item To include a \texttt{DOI} or \texttt{URL} for every reference that is not a published book or there are good reasons why there is no online pointer for it
+\end{itemize}
+Both settings are already active in this template (provided the DOIs / URLs are specified in the references in literature.bib).
+
+\textbf{The following guidelines are not mandatory but may still help you to achieve a high degree of uniformity:}
+\begin{itemize}
+\item Every \texttt{@article} and \texttt{@inproceedings} should have a \texttt{DOI} if available and a \texttt{URL} \textbf{only} if no \texttt{DOI} is available.
+\item Gray Literature (Arxiv, reports, ...) are \texttt{@misc} and not \texttt{@article} or \texttt{@inproceedings}, also when they sometimes try to disguise themselves as such on Google Scholar. 
+\item Titles are not capitalized by default. Capitalization is required only for special names, abbreviations, and after colons, fullstops, question marks, or exclamation marks. Example: \texttt{TITLE=\{The \{EU\} \{GDPR\} is there! \{What's\} next?\}}.
+\item For \texttt{JOURNAL} and \texttt{BOOKTITLE} we give the full name, not the abbreviation (example: Business \& Information Systems Engineering instead of BISE, ACM Computing Surveys instead of ACM Comp. Surv.). Exception: When the \texttt{BOOKTITLE} refers to multiple conferences held at the same place and time, you may abbreviate. Journal titles and Conference titles are capitalized (except for ``and'', ``of'', etc.)
+\item For conferences, we put \texttt{PUBLISHER} information (ACM/IEEE) into the publisher, not the conference name. Example: \texttt{BOOKTITLE=\{Symposium on Security and Privacy\}, PUBLISHER=\{IEEE\}}. For journals like ACM Computing Surveys, we keep the publisher in the title and leave \texttt{PUBLISHER} empty. All conferences require a \texttt{PUBLISHER} (often Springer, AIS, IEEE, ACM). 
+\item We proceed similarly for the year. Every reference requires a year. We put the year not in the \texttt{BOOKTITLE} for conferences, but only in \texttt{YEAR}. We do not specify \texttt{DATE} or \texttt{MONTH}.
+\item We do not specify \texttt{URLDATE}, \texttt{ISBN}, \texttt{ISSN} and conference or publisher \texttt{ADDRESS}.
+\item Specify page numbers if available. Sometimes you need to download the paper to find the page numbers; they are not always included in Google Scholar's or the publisher's BibTeX file. We do not specify page numbers if they are 1--X. \texttt{NUMPAGES} also should not be filled.
+\item Specify \texttt{VOLUME} and \texttt{NUMBER} if available, so the result is ``MIS Quarterly 12(3)''.
+\item Please check all preprints for updates, i.e., if there has been a conference or journal publication with the same or similar title in the meantime. If so, please take the published (peer-reviewed) version.
+\item Use \texttt{URL} instead of \texttt{NOTE}. Use \texttt{NOTE} only in exceptional cases (e.g., you want to point out that a report with two authors was published by McKinsey or NBER). Check all \texttt{URLs} and \texttt{DOIs} at the very end.
+\item Make sure you specify the full first name of the first author. Second and third names of the first author are not necessary. Look through the bibliography if the same author always has consistent (abbreviations of) their second/third first name. 
+\item If the \texttt{author} is an organization consisting of multiple parts (e.g., World Economic Forum), make sure you put it in double brackets: \texttt{AUTHOR=\{\{World Economic Forum\}\}}. Otherwise, the author will turn out to be W.F. Forum or Forum, W. F. -- similarly for author names like ``de Vries''. 
+\item Abbreviate numbers in the following way (not only in the bibliography but also in the chapter): First, second, third, 4th, 5th, ..., 10th, 11th, ..., 21st, 22nd, ...
+\item Make sure that you use two hyphens \texttt{--} for page numbers and for dashes in the text (the result is --).
+\item Check for duplicates with small deviations.
+\end{itemize}
